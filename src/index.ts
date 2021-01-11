@@ -20,8 +20,8 @@ const inputFactory = () => {
     input.type = 'number';
     input.placeholder = 'Enter a number';
     input.addEventListener('change', () => {
-        const values = [];
-        document.querySelectorAll('.input').forEach((inp) => {
+        const values: number[] = [];
+        document.querySelectorAll<HTMLInputElement>('.input').forEach((inp) => {
             const value = parseFloat(inp.value);
             if (Number.isFinite(value)) {
                 values.push(value);
