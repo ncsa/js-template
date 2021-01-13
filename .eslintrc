@@ -1,13 +1,11 @@
 {
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "prettier",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
+    "plugin:prettier/recommended"
   ],
   "plugins": [
-    "prettier",
-    "react"
+    "prettier"
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -158,36 +156,6 @@
     "semi": [
       "error",
       "always"
-    ],
-    "react/destructuring-assignment": "off",
-    "react/jsx-curly-newline": "off",
-    "react/jsx-filename-extension": [
-      "error",
-      {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
-      }
-    ],
-    "react/jsx-indent": [
-      "error",
-      4
-    ],
-    "react/jsx-indent-props": [
-      "error",
-      4
-    ],
-    "react/jsx-one-expression-per-line": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/jsx-tag-spacing": "error",
-    "react/jsx-wrap-multilines": "off",
-    "react/jsx-uses-vars": 2,
-    "react/jsx-uses-react": 2,
-    "react/require-default-props": "off",
-    "react/static-property-placement": [
-      "warn",
-      "static public field"
     ],
     "@typescript-eslint/explicit-function-return-type": "off"
   }
