@@ -5,7 +5,7 @@ document.querySelector('body')?.appendChild(container);
 
 // Output
 const output = document.createElement('div');
-output.innerText = 'Sum: ...';
+output.innerHTML = 'Sum: ...';
 output.classList.add('output');
 container.appendChild(output);
 
@@ -20,21 +20,21 @@ const inputFactory = () => {
     input.type = 'number';
     input.placeholder = 'Enter a number';
     input.addEventListener('change', () => {
-        const values: number[] = [];
-        document.querySelectorAll<HTMLInputElement>('.input').forEach((inp) => {
+        const values = [];
+        document.querySelectorAll('.input').forEach((inp) => {
             const value = parseFloat(inp.value);
             if (Number.isFinite(value)) {
                 values.push(value);
             }
         });
-        output.innerText = `Sum: ${sum(values)}`;
+        output.innerHTML = `Sum: ${sum(values)}`;
     });
     return input;
 };
 
 // Add button
 const addInputButton = document.createElement('button');
-addInputButton.innerText = 'Add input';
+addInputButton.innerHTML = 'Add input';
 addInputButton.addEventListener('click', () => inputsContainer.appendChild(inputFactory()));
 container.insertBefore(addInputButton, inputsContainer);
 
