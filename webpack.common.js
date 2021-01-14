@@ -91,12 +91,12 @@ module.exports = {
             template: 'src/index.html'
         }),
         new Webpack.DefinePlugin({
-            'process.env.PUBLIC_PATH': JSON.stringify(process.env.PUBLIC_PATH || '/')
+            'process.env.PUBLIC_PATH': JSON.stringify(process.env.PUBLIC_PATH || '/')   // The base path for the app
         }),
         new FaviconsWebpackPlugin({
             logo: './src/images/favicon.png',
             prefix: 'icons/',
-            // emitStats: false,
+            emitStats: false,
             inject: true,
             favicons: {
                 icons: {
