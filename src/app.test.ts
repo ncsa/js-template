@@ -2,7 +2,7 @@ import { sum } from './utils/math';
 
 describe('app should', () => {
     beforeAll(() => {
-        import('./app-ts');
+        import('./app');
     });
 
     test('initialize with two inputs', () => {
