@@ -1,1 +1,42 @@
-declare const ENV: string;
+declare const ENV: 'development' | 'production' | 'test';
+declare const PUBLIC_PATH: string;
+
+declare module '*.json' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.bmp' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.gif' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.jpg' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.jpeg' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.png' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.webp' {
+    const src: string;
+    export default src;
+}
+
+declare module '*.css' {
+    const classes: { readonly [key: string]: string };
+    export default classes;
+}
